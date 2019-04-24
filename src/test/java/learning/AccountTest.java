@@ -21,8 +21,11 @@ public class AccountTest {
 
     @Test
     public void given20AndMin10_whenWithdraw100_thenFail() {
-        System.out.println(account.balance);
         assertFalse(account.withdraw(100));
-        System.out.println(account.balance);
+    }
+
+    @Test
+    public void given20AndMin10_whenWithdraw15_thenFail() {
+        assertFalse(account.withdraw(15));
     }
 }
